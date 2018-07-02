@@ -7,7 +7,7 @@ body { font-family: sans-serif; height: 100%; }
 
 .carousel { background: #EEE; height: 50%; }
 
-.carousel-cell { width: 100%; min-height: 250px; height: 50vh; background: #8C8; border-radius: 5px; background-position: center center; background-size: cover; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; }
+.carousel-cell { width: 100%; min-height: 250px; height: 45vh; background: #8C8; border-radius: 5px; background-position: center center; background-size: cover; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; }
 
 .flickity-page-dots { display: none; }
 
@@ -18,3 +18,5 @@ body { font-family: sans-serif; height: 100%; }
 .progress-bar { height: 20px; width: 0; background: #333; }
 
 .carousel-text { font-size: 22px; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 25px; }
+
+#map { width: 100%; height: 50vh; background-color: grey; }

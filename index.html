@@ -8,11 +8,17 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <button class="button" id="restart-carousel">Restart</button>
-    <div class="main-carousel">
-        
-    </div>
-    <div class="progress-bar"></div>
+    <section>
+        <button class="button" id="restart-carousel">Restart</button>
+        <div class="main-carousel"></div>
+        <div class="progress-bar"></div>
+    </section>
+    <section>
+        <div>
+            <div id="map"></div>
+            <p id="infos"></p>
+        </div>
+    </section>
     <script id="template-carousel-slide" type="text/mustache">
         <div class="carousel-cell" id={{id}} data-flickity-bg-lazyload={{image}}>
             <div class="container">
@@ -26,37 +32,45 @@
         var carouselSlides = [
     {
         id: 1,
-        image: 'https://images.pexels.com/photos/611328/pexels-photo-611328.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        title: 'Random title',
-        description: '<p>Lorem ipsum.</p> <img src=https://picsum.photos/300/100" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        image: 'https://media-cdn.tripadvisor.com/media/photo-s/08/45/a4/0f/cruz-andina-traveller.jpg',
+        title: 'The Arbol de Piedra',
+        description: '<p>Bolivia</p> <img src="https://media-cdn.tripadvisor.com/media/photo-s/08/45/a4/0f/cruz-andina-traveller.jpg"  width="250" alt="Photo placeholder">',
+        coords: {lat: -22.0519254, lng: -67.8832848}
     },
     {
         id: 2,
-        image: 'https://images.pexels.com/photos/1048256/pexels-photo-1048256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        title: 'Random title',
-        description: '<p>Lorem ipsum.</p> <img src=https://picsum.photos/300/100" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        image: 'https://jimages.files.wordpress.com/2015/05/timestone.jpg',
+        title: 'Hoodoos at Ah-Shi-Sle-Pah Wilderness Area',
+        description: '<p>North Mexico</p> <img src="https://jimages.files.wordpress.com/2015/05/timestone.jpg" width="250" alt="Photo placeholder">',
+        coords: {lat: 36.1666815, lng: -107.919457}
+        //https://www.recreation.gov/recreationalAreaDetails.do?contractCode=NRSO&recAreaId=14578
     },
     {
         id: 3,
-        image: 'https://images.pexels.com/photos/987757/pexels-photo-987757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        title: 'Random title',
-        description: '<p>Lorem ipsum.</p> <img src=https://picsum.photos/300/100" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        image: 'https://www.worldatlas.com/r/w728-h425-c728x425/upload/1c/89/de/shutterstock-641353201.jpg',
+        title: 'Giant\'s Causeway',
+        description: '<p>Northern Ireland</p> <img src="https://www.worldatlas.com/r/w728-h425-c728x425/upload/1c/89/de/shutterstock-641353201.jpg" width="250" alt="Photo placeholder">',
+        coords: {lat: 55.2406446, lng: -6.5140728}
+        //https://www.nationaltrust.org.uk/giants-causeway
     },
     {
         id: 4,
-        image: 'https://images.pexels.com/photos/1027393/pexels-photo-1027393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        title: 'Random title',
-        description: '<p>Lorem ipsum.</p> <img src=https://picsum.photos/300/100" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        image: 'https://ssl.c.photoshelter.com/img-get2/I0000cBhX5WDBqVg/fit=1000x750/04AUS-30082-Painted-Cliffs-Tasmania.jpg',
+        title: 'Painted Cliffs',
+        description: '<p>Tasmania</p> <img src="https://ssl.c.photoshelter.com/img-get2/I0000cBhX5WDBqVg/fit=1000x750/04AUS-30082-Painted-Cliffs-Tasmania.jpg" width="250" alt="Photo placeholder">',
+        coords: {lat: -42.5924912, lng: 148.0497254}
+        //http://www.parks.tas.gov.au/?base=1490
     },
     {
         id: 5,
-        image: 'https://images.pexels.com/photos/1188473/pexels-photo-1188473.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        title: 'Random title',
-        description: '<p>Lorem ipsum.</p> <img src=https://picsum.photos/300/100" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        image: 'https://i.pinimg.com/originals/7e/c6/60/7ec6606dc00d303263254fc2e5bbdb6e.jpg',
+        title: 'The Wave Rock',
+        description: '<p>Arizona, USA</p> <img src="https://i.pinimg.com/originals/7e/c6/60/7ec6606dc00d303263254fc2e5bbdb6e.jpg" width="250" alt="Photo placeholder">',
+        coords: {lat: 36.9957056, lng: -112.0082794}
+        //https://www.blm.gov/programs/recreation/permits-and-passes/lotteries-and-permit-systems/arizona/coyote-buttes
     }
     ];
     </script>
-
     <script type="text/javascript" src="vendor/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/flickity-bg-lazyload@1/bg-lazyload.js"></script>
     <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>

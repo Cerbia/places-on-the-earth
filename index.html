@@ -10,49 +10,56 @@
 <body>
     <button class="button" id="restart-carousel">Restart</button>
     <div class="main-carousel">
-
-        <div class="carousel-cell" id="carousel-zalando" data-flickity-bg-lazyload="https://images.pexels.com/photos/611328/pexels-photo-611328.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-            <div class="container">
-                <p class="carousel-text">
-                    Nie ma co tu dużo tekstu pisać. Max. jedna linijka.
-                </p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-babbel" data-flickity-bg-lazyload="https://images.pexels.com/photos/1048256/pexels-photo-1048256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-            <div class="container">
-                <p class="carousel-text">
-                    Nie ma co tu dużo tekstu pisać. Max. jedna linijka.
-                </p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-amazon" data-flickity-bg-lazyload="https://images.pexels.com/photos/987757/pexels-photo-987757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-            <div class="container">
-                <p class="carousel-text">
-                    Nie ma co tu dużo tekstu pisać. Max. jedna linijka.
-                </p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-helloFresh" data-flickity-bg-lazyload="https://images.pexels.com/photos/1027393/pexels-photo-1027393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-            <div class="container">
-                <p class="carousel-text">
-                    Nie ma co tu dużo tekstu pisać. Max. jedna linijka.
-                </p>
-                
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-eyeEm" data-flickity-bg-lazyload="https://images.pexels.com/photos/1188473/pexels-photo-1188473.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-            <div class="container">
-                <p class="carousel-text">
-                    Nie ma co tu dużo tekstu pisać. Max. jedna linijka.
-                </p>
-            </div>
-        </div>
+        
     </div>
     <div class="progress-bar"></div>
-    
+    <script id="template-carousel-slide" type="text/mustache">
+        <div class="carousel-cell" id={{id}} data-flickity-bg-lazyload={{image}}>
+            <div class="container">
+                <div class="carousel-text">
+                    {{{description}}}
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/javascript">
+        var carouselSlides = [
+    {
+        id: 1,
+        image: 'https://images.pexels.com/photos/611328/pexels-photo-611328.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        title: 'Random title',
+        description: '<p>Lorem ipsum.</p> <img src=https://picsum.photos/300/100" alt="Photo placeholder"> <p>Dolor sit.</p>'
+    },
+    {
+        id: 2,
+        image: 'https://images.pexels.com/photos/1048256/pexels-photo-1048256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        title: 'Random title',
+        description: '<p>Lorem ipsum.</p> <img src=https://picsum.photos/300/100" alt="Photo placeholder"> <p>Dolor sit.</p>'
+    },
+    {
+        id: 3,
+        image: 'https://images.pexels.com/photos/987757/pexels-photo-987757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        title: 'Random title',
+        description: '<p>Lorem ipsum.</p> <img src=https://picsum.photos/300/100" alt="Photo placeholder"> <p>Dolor sit.</p>'
+    },
+    {
+        id: 4,
+        image: 'https://images.pexels.com/photos/1027393/pexels-photo-1027393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        title: 'Random title',
+        description: '<p>Lorem ipsum.</p> <img src=https://picsum.photos/300/100" alt="Photo placeholder"> <p>Dolor sit.</p>'
+    },
+    {
+        id: 5,
+        image: 'https://images.pexels.com/photos/1188473/pexels-photo-1188473.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        title: 'Random title',
+        description: '<p>Lorem ipsum.</p> <img src=https://picsum.photos/300/100" alt="Photo placeholder"> <p>Dolor sit.</p>'
+    }
+    ];
+    </script>
     <script type="text/javascript" src="vendor/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/flickity-bg-lazyload@1/bg-lazyload.js"></script>
     <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
